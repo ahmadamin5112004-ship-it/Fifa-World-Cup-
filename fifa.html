@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Cup 2026 </title>
+  <link rel="stylesheet" href="fifa.css" />
+</head>
+<body>
+  <header class="hero">
+    <p class="tag">FIFA World Cup 2026 </p>
+    <h1>World Cup 2026 Tournament Simulator</h1>
+    <p class="subtitle">
+      Click a flag to play the current match. Win = 3 points, Draw = 1 point, Loss = 0 points.
+    </p>
+
+    <div class="controls">
+      <button id="nextMatchBtn">Next Match</button>
+      <button id="autoGroupBtn">Auto Simulate Group Stage</button>
+      <button id="runKnockoutBtn" disabled>Run Knockout Stage</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel match-panel">
+      <div class="panel-head">
+        <h2>Current Match</h2>
+        <span id="progressText">0 / 72 matches played</span>
+      </div>
+
+      <div id="matchInfo" class="match-info">
+        Press <b>Next Match</b> to begin.
+      </div>
+
+      <div id="currentMatch" class="match-card hidden"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Qualified Teams</h2>
+      </div>
+
+      <div id="qualifiedBox" class="qualified-box">
+        <p class="muted">Complete group stage to see top 2 and best 8 third-place teams.</p>
+      </div>
+    </section>
+
+    <section class="panel full">
+      <div class="panel-head">
+        <h2>Group Standings</h2>
+      </div>
+      <div id="groupsGrid" class="groups-grid"></div>
+    </section>
+
+    <section class="panel full">
+      <div class="panel-head">
+        <h2>Knockout Stage</h2>
+      </div>
+      <div id="knockoutBox" class="knockout-box">
+        <p class="muted">Run the knockout stage after group stage ends.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="fifa.js"></script>
+</body>
+</html>
